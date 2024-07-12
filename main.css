@@ -1,0 +1,146 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.background {
+    background: url('images/Background.jpeg') repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 50px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome */
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box;
+}
+
+.menu-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s; 
+}
+
+.menu a:hover {
+    color: #f6d29b; 
+}
+
+.main-content ul {
+    list-style: none;
+    padding-left: 0;
+    color: white; 
+}
+
+.main-content ul li {
+    margin-bottom: 10px;
+    color: white; 
+    position: relative; 
+    padding-left: 16px; 
+}
+
+.main-content ul li::before {
+    content: "– "; 
+    color: #f6d29b; 
+    position: absolute; 
+    left: 0; 
+    top: -1px; 
+}
+
+.main-content a {
+    color: #f6d29b;
+    transition: color 0.3s; 
+}
+.main-content a:active {
+    color: #7d533d; 
+}
+
+.container {
+    background-color: #292929;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2% 2% 2%;
+    flex-grow: 1; 
+    margin-top: 0; 
+    padding-top: 70px;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.right-section h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #f6d29b;
+}
+
+.right-section p {
+    margin-top: 20px;
+    color: white;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        text-align: center;
+    }
+}

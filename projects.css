@@ -1,0 +1,89 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.page-heading {
+    margin-top: 20px;
+    color: #f6d29b;
+}
+
+.description {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.content-1, .content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.project-1-desc, .project-2-desc {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    line-height: 1.6;
+}
+
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-1, .video-2, .video-3 {
+    text-align: center;
+    margin: 10px;
+}
+
+.video-1 video, .video-2 video, .video-3 video {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.video-description {
+    color: #f6d29b !important;
+}
+
+@media (min-width: 801px) {
+    .video-1, .video-2 {
+        width: 40%; 
+    }
+
+    .video-3 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .video-1, .video-2, .video-3 {
+        width: 80%; 
+        margin: 10px auto; 
+    }
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 16px;
+    color: #f6d29b;
+    margin-top: 0;
+}
