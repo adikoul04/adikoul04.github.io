@@ -1,8 +1,8 @@
 .main-content {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: flex-start; /* Align items to the start (top) */
+    justify-content: flex-start; /* Justify content to the start (top) */
     width: 100%;
     flex-grow: 1; 
     margin-top: 50px; 
@@ -12,6 +12,8 @@
 .page-heading {
     margin-top: 20px;
     color: #f6d29b; 
+    text-align: center; /* Center the heading text */
+    width: 100%; /* Ensure the heading takes the full width */
 }
 
 .content-1, .content-2 {
