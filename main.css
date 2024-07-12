@@ -18,9 +18,9 @@ body, html {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 50px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome */
-    -moz-box-sizing: border-box; /* Firefox */
-    box-sizing: border-box;
+    -webkit-background-size: cover; /* Safari/Chrome */
+    -moz-background-size: cover; /* Firefox */
+    -o-background-size: cover;
     background-attachment: fixed;
 }
 
