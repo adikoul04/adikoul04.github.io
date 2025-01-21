@@ -6,9 +6,11 @@
     <title>Aditya Koul - Projects</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="social-skills.css">
     <meta name="theme-color" content="#000000">
 </head>
 <body>
+    <div class="menu-overlay"></div>
     <div class="background">
         <div class="menu-background">
             <nav class="menu">
@@ -17,27 +19,59 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="exp.html">Experience</a></li>
                     <li><a href="projects.html">Projects</a></li>
+                    <li class="social-links">
+                        <a href="https://www.linkedin.com/in/aditya-koul/" target="_blank" class="social-icon">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/adikoul04" target="_blank" class="social-icon">
+                            <img src="images/github-icon.svg" alt="GitHub">
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="container">
             <div class="main-content">
                 <h1 class="page-heading">Projects</h1>
-                <p class="description">Outside of class, I work on various CS projects to sharpen my skills and learn new concepts. I will provide a short overview of my projects here. If you want more detail or to see the code for these projects, check out my <a href="https://github.com/adikoul04/Projects" target="_blank">GitHub</a>.</p>
-                <div class="content-1">
-                    <div class="project-1-desc">
+                <p class="description">
+                    Outside of class, I work on various CS projects to sharpen my skills and learn new concepts. I will provide a short overview of my projects here. If you want more detail or to see the code for these projects, check out my
+                    <a href="https://github.com/adikoul04/Projects" target="_blank">GitHub</a>.
+                </p>
+                <div class="project-section">
+                    <div class="project-desc">
+                        <h2>AI Attendance System</h2>
+                        <p>
+                            I participated in the Fall 2024 AI4ALL Ignite Accelerator program. In this program, I learned about numerous AI concepts, best practices, and ethical concerns of developing AI technologies. We were put into groups, and each group created an AI-powered project based on a particular subfield. Our group focused on computer vision, so we developed an automated smart attendance system that uses facial recognition to take attendance and logs each entry's attendance. The user is also able to look at past attendance for any particular day. <br><br>
+                            See more details
+                            <a href="https://github.com/adikoul04/AI-Attendance-System" target="_blank">here</a>.
+                        </p>
+                    </div>
+                    <div class="video-single">
+                        <video controls autoplay loop muted>
+                            <source src="videos/AI_Attendance_Recording.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="video-description">AI Attendance Demo</p>
+                    </div>
+                </div>
+                <div class="project-section">
+                    <div class="project-desc">
                         <h2>Car Driving Reinforcement Learning Model</h2>
-                        <p>I created an RL Model that learns to drive a car along a circular track. I created a simple game as the base environment in which the player uses the arrow keys to control the car. The objective is to complete a lap as fast as possible, and if the car goes off the track, it resets at its starting position. I utilized an Epsilon-Greedy Q-Learning algorithm to implement the RL model. After about 60,000 iterations, the car was able to drive a full lap on its own.<br><br>See more details <a href="https://github.com/adikoul04/Projects/tree/main/Car_Driving_RL_Model" target="_blank">here</a>.</p>
+                        <p>
+                            I created an RL Model that learns to drive a car along a circular track. I created a simple game as the base environment in which the player uses the arrow keys to control the car. The objective is to complete a lap as fast as possible, and if the car goes off the track, it resets at its starting position. I utilized an Epsilon-Greedy Q-Learning algorithm to implement the RL model. After about 60,000 iterations, the car was able to drive a full lap on its own.<br><br>
+                            See more details
+                            <a href="https://github.com/adikoul04/Projects/tree/main/Car_Driving_RL_Model" target="_blank">here</a>.
+                        </p>
                     </div>
                     <div class="video-section">
-                        <div class="video-1">
+                        <div class="video-double">
                             <video controls autoplay loop muted>
                                 <source src="videos/RL_Model_Training.mov" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <p class="video-description">RL Model Training</p>
                         </div>
-                        <div class="video-2">
+                        <div class="video-double">
                             <video controls autoplay loop muted>
                                 <source src="videos/RL_Model_Full_Lap.mov" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -46,12 +80,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="content-2">
-                    <div class="project-2-desc">
+                <div class="project-section">
+                    <div class="project-desc">
                         <h2>Top Drives Rating Predictor</h2>
-                        <p>For a while, I played a mobile game called <em>Top Drives</em> in which cars are given ratings based on a number of factors including power, weight, drivetrain, tire type, and more. I created a neural network trained on data of 435 cars in the game to predict the rating of new cars given stats entered by the user.<br><br>See more details <a href="https://github.com/adikoul04/Projects/tree/main/Top_Drives_Neural_Network" target="_blank">here</a>.</p>
+                        <p>
+                            For a while, I played a mobile game called <em>Top Drives</em> in which cars are given ratings based on a number of factors including power, weight, drivetrain, tire type, and more. I created a neural network trained on data of 435 cars in the game to predict the rating of new cars given stats entered by the user.<br><br>
+                            See more details
+                            <a href="https://github.com/adikoul04/Projects/tree/main/Top_Drives_Neural_Network" target="_blank">here</a>.
+                        </p>
                     </div>
-                    <div class="video-3">
+                    <div class="video-single">
                         <video controls autoplay loop muted>
                             <source src="videos/Top_Drives_Model_Test.mov" type="video/mp4">
                             Your browser does not support the video tag.
@@ -62,5 +100,7 @@
             </div>
         </div>
     </div>
+    <script src="particles.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

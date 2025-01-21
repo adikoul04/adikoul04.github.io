@@ -6,9 +6,11 @@
     <title>Aditya Koul - About Me</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="social-skills.css">
     <meta name="theme-color" content="#000000">
 </head>
 <body>
+    <div class="menu-overlay"></div>
     <div class="background">
         <div class="menu-background">
             <nav class="menu">
@@ -17,12 +19,57 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="exp.html">Experience</a></li>
                     <li><a href="projects.html">Projects</a></li>
+                    <li class="social-links">
+                        <a href="https://www.linkedin.com/in/aditya-koul/" target="_blank" class="social-icon">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/adikoul04" target="_blank" class="social-icon">
+                            <img src="images/github-icon.svg" alt="GitHub">
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="container">
             <div class="main-content">
                 <h1 class="page-heading">About Me</h1>
+                <div class="skills-container">
+                    <div class="skills-columns">
+                        <div class="skills-column">
+                            <h3>Languages</h3>
+                            <div class="skills-cloud">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">ROS</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">SQL/PostgreSQL</span>
+                                <span class="skill-tag">Rust</span>
+                                <span class="skill-tag">Ocaml</span>
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">x86 Assembly</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-column">
+                            <h3>Frameworks & Concepts</h3>
+                            <div class="skills-cloud">
+                                <span class="skill-tag">AI/ML</span>
+                                <span class="skill-tag">Neural Networks</span>
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Reinforcement Learning</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">Data Structures & Algorithms</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">TensorFlow</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
                 <div class="content-2">
                     <div class="left-section-2">
                         <p>I am studying Computer Science at the University of Maryland. I am on the Machine Learning track and am minoring in Robotics and Autonomous Systems. At school, I am on the club swim team and I am proud to have represented UMD at last year's Club Swim Nationals in Indianapolis. Outside of the pool, I am currently leading the Autonomous flight subteam in the UMD MUAS club, where we are desiging a drone to compete in the annual <a href="https://suas-competition.org/" target="_blank">SUAS competition</a> in June. </p>
@@ -49,5 +96,7 @@
             </div>
         </div>
     </div>
+    <script src="particles.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
