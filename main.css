@@ -1,294 +1,253 @@
-html {
-    background-color: #000;
+/* =========================================================
+   Global styles & variables
+========================================================= */
+:root{
+    --accent:#b26551;
+    --text:#f5f5f5;
+    --title: #f6d29b;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+html{background:#000;}
+
+body,html{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-family:'Inter',system-ui,Arial,sans-serif;
+    overflow-x:hidden;
+    color:var(--text);
+    scroll-behavior:smooth;
 }
 
-.background::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/Background3.webp') center center no-repeat;
-    background-size: cover;
-    z-index: -1;
-    display: block;
+/* Hide the hamburger button by default (shows only ≤ 800 px) */
+.mobile-menu-button{display:none;}
+
+/* =========================================================
+   Fixed background image
+========================================================= */
+.background::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url("images/Background3.webp") center/cover no-repeat;
+    z-index:-1;
 }
 
-.background {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 50px;
+.background{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 2% 50px;
 }
 
-.menu-background {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid #f6d29b;
+/* =========================================================
+   Desktop navigation bar
+========================================================= */
+.menu-background{
+    width:100%;
+    position:fixed;
+    top:0;
+    text-align:center;
+    padding:10px 0;
+    z-index:1000;
+    background:rgba(13,13,13,.6);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(212,175,55,.3);
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 20px;
+.menu ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+.menu ul li{display:inline;}
+
+.menu a{
+    position:relative;
+    font-family:'Fira Code',monospace;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-size:18px;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    transition:color .3s;
+}
+.menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:var(--accent);
+    transition:width .3s;
+}
+.menu a:hover,
+.menu a:focus-visible{color: inherit;}
+.menu a:hover::after,
+.menu a:focus-visible::after{width:100%;}
+
+/* --- NO underline for icon buttons --- */
+.menu a.social-icon::after{content:none;}
+
+/* layout for icon list item */
+.menu ul li.social-links{display:flex;gap:15px;}
+
+/* =========================================================
+   Layout containers
+========================================================= */
+.container{
+    background:#1d1d1d;
+    width:100%;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0 2% 2%;
+    flex-grow:1;
+    border-radius:10px;
+    animation:fadeIn .5s ease-in;
 }
 
-.menu ul li {
-    display: inline;
+.main-content{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    gap:30px;
 }
+.main-content ul{list-style:none;padding-left:0;}
+.main-content ul li{margin-bottom:10px;position:relative;padding-left:16px;}
+.main-content ul li::before{content:"– ";color:var(--accent);position:absolute;left:0;top:-1px;}
+.main-content a{color:var(--accent);transition:color .3s;}
+.main-content a:hover{text-decoration:underline;}
 
-.menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s; 
-    position: relative;
-    overflow: hidden;
-}
+.left-section,.right-section{flex:1;padding:40px 20px;}
+.left-section img{max-width:100%;max-height:80vh;border-radius:10px;}
+.right-section h1{margin:0;font-size:36px;color:var(--title);}
+.right-section p{margin-top:20px;line-height:1.6;}
+img{transition:transform .3s,filter .3s;}
 
-.menu ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f6d29b;
-    transition: width 0.3s ease-in-out;
-}
+/* =========================================================
+   Fade-in animation utilities
+========================================================= */
+.hidden{opacity:0;transform:translateY(20px);transition:opacity .6s ease-out,transform .6s ease-out;}
+.fade-in{opacity:1;transform:none;}
 
-.menu ul li a:hover::after {
-    width: 100%;
-}
+section,.main-content,.container{opacity:0;transform:translateY(20px);}
+.in-view{animation:fadeInUp .6s forwards;}
+@keyframes fadeInUp{to{opacity:1;transform:none;}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
 
-.menu a:hover {
-    color: #f6d29b; 
-}
+/* Typing cursor */
+.typing-container{display:inline-flex;align-items:center;font-family:'Fira Code',monospace;font-size:1.25rem;color:var(--accent);margin-top:.25rem;}
+.cursor{width:1px;background:var(--accent);animation:blink 1s step-end infinite;}
+@keyframes blink{50%{opacity:0;}}
 
-.main-content ul {
-    list-style: none;
-    padding-left: 0;
-    color: white; 
-}
+/* =========================================================
+   MOBILE  (≤ 800 px)
+========================================================= */
+@media (max-width:800px){
 
-.main-content ul li {
-    margin-bottom: 10px;
-    color: white; 
-    position: relative; 
-    padding-left: 16px; 
-}
-
-.main-content ul li::before {
-    content: "– "; 
-    color: #f6d29b; 
-    position: absolute; 
-    left: 0; 
-    top: -1px; 
-}
-
-
-.main-content a {
-    color: #f6d29b;
-    transition: color 0.3s; 
-}
-.main-content a:active {
-    color: #7d533d; 
-}
-
-.container {
-    background-color: #1d1d1d;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2% 2% 2%;
-    flex-grow: 1; 
-    margin: 0; 
-    border-radius: 10px;
-    animation: fadeIn 0.5s ease-in;
-    transition: box-shadow 0.3s ease;
-}
-
-.menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.menu-overlay.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.main-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
-}
-
-.main-content a:hover {
-    color: #f6d29b;
-    text-decoration: underline;
-    text-decoration-color: #f6d29b;
-}
-
-.left-section, .right-section {
-    flex: 1;
-    padding: 20px;
-    padding-top: 40px;
-}
-
-.left-section img {
-    max-width: 100%;
-    max-height: 80vh;
-    height: auto;
-    border-radius: 10px;
-}
-
-.right-section h1 {
-    margin: 0;
-    font-size: 36px;
-    color: #f6d29b;
-}
-
-.right-section p {
-    margin-top: 20px;
-    color: white;
-    line-height: 1.6;
-}
-
-.right-section img {
-    transition: transform 0.3s ease;
-}
-
-.mobile-menu-button {
-    background-color: rgba(29, 29, 29, 0.9);
-    border: 1px solid #f6d29b;
-    border-radius: 5px;
-    padding: 10px;
-    display: none;
-}
-
-img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.menu ul li.social-links {
-    display: flex;       
-    flex-direction: row;
-    gap: 15px;
-}
-
-@media (max-width: 800px) {
-    .main-content {
-        flex-direction: column;
+    /* Remove bar look on small screens */
+    .menu-background{
+        background:transparent;
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+        border-bottom:none;
+        padding:0;
     }
 
-    .menu-background {
-        background-color: transparent;
-        padding: 0;
-        border-bottom: none;
-      }
-
-    .left-section, .right-section {
-        width: 100%;
-        text-align: center;
+    /* Show & style hamburger */
+    .mobile-menu-button{
+        display:flex;
+        position:fixed;
+        top:20px;
+        right:20px;
+        width:50px;
+        height:50px;
+        align-items:center;
+        justify-content:center;
+        border:2px solid var(--title);
+        border-radius:8px;
+        background:rgba(0,0,0,.5);
+        color:var(--title);
+        cursor:pointer;
+        font-size:18px;
+        z-index:1002;
+        transition: color 0.3s, border-color 0.3s;
     }
 
-    .mobile-menu-button {
-        display: flex;                          
-        align-items: center;                    
-        justify-content: center;                
-        width: 50px;                            
-        height: 50px;                           
-        background-color: rgba(0, 0, 0, 0.5);   
-        border: 2px solid #f6d29b;             
-        border-radius: 8px;                    
-        color: #f6d29b;                        
-        cursor: pointer;                       
-        font-size: 18px;               
-        position: fixed; top: 20px; right: 20px;
+    .mobile-menu-button:hover {
+        color: var(--accent);         /* Applies to SVG stroke */
+        border-color: var(--accent); /* Applies to button border */
+    }
+    
+
+    /* Page layout stack */
+    .main-content{flex-direction:column;}
+    .left-section,.right-section{width:100%;text-align:center;}
+
+    /* Sliding drawer (the <ul>) */
+    .menu{z-index:1001;}
+    .menu ul{
+        flex-direction:column;
+        position:fixed;
+        top:0;
+        right:-70%;
+        width:70%;
+        height:100vh;
+        background:rgba(13,13,13,.8);
+        border-left:1px solid rgba(212,175,55,.3);
+        transition:right .3s;
+        align-items:center;
+    }
+    .menu ul li{margin:10px 0;}
+    .menu.active ul{right:0;}
+
+    /* Transparent click overlay */
+    .menu-overlay{
+        position:fixed;
+        inset:0;
+        background:transparent;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .3s;
+        z-index:999;
+    }
+    .menu-overlay.active{
+        opacity:1;
+        pointer-events:auto;
     }
 
-    .menu ul {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        background-color: rgb(0, 0, 0);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        align-items: center;
-        border-left: 2px solid #f6d29b;
+    /* Animated blur panel */
+    .menu-blur{
+        position:fixed;
+        top:0;
+        right:-70%;
+        width:70%;
+        height:100vh;
+        background:rgba(0,0,0,.3);
+        backdrop-filter:blur(8px);
+        -webkit-backdrop-filter:blur(8px);
+        transition:right .3s;
+        z-index:998;
     }
+    .menu-blur.active{right:0;}
 
-    .menu ul li.social-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
+    .menu ul li.social-links{
+        flex-direction:row;
+        justify-content:center;
+        width:100%;
     }
-
-    .menu ul li {
-        margin: 10px 0;
-    }
-
-    .menu.active ul {
-        right: 0;
-    }
-
 }
-
-
