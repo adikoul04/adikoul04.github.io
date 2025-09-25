@@ -91,49 +91,49 @@
     cursor: default;
 }
 
-.skills-column:nth-child(1) .skill-tag {
+.skills-column:nth-of-type(1) .skill-tag {
     background-color: rgba(246, 210, 155, 0.1);
     border: 1px solid #f6d29b;
     color: #f6d29b;
 }
 
-.skills-column:nth-child(1) .skill-tag:hover {
+.skills-column:nth-of-type(1) .skill-tag:hover {
     background-color: #f6d29b;
     color: #1d1d1d;
     transform: translateY(-2px);
 }
 
-.skills-column:nth-child(2) .skill-tag {
+.skills-column:nth-of-type(2) .skill-tag {
     background-color: rgba(255, 191, 128, 0.1);
     border: 1px solid #ffbf80;
     color: #ffbf80;
 }
 
-.skills-column:nth-child(2) .skill-tag:hover {
+.skills-column:nth-of-type(2) .skill-tag:hover {
     background-color: #ffbf80;
     color: #1d1d1d;
     transform: translateY(-2px);
 }
 
-.skills-column:nth-child(3) .skill-tag {
+.skills-column:nth-of-type(3) .skill-tag {
     background-color: rgba(200, 200, 200, 0.1);
     border: 1px solid #c8c8c8;
     color: #c8c8c8;
 }
 
-.skills-column:nth-child(3) .skill-tag:hover {
+.skills-column:nth-of-type(3) .skill-tag:hover {
     background-color: #c8c8c8;
     color: #1d1d1d;
     transform: translateY(-2px);
 }
 
-.skills-column:nth-child(4) .skill-tag {
+.skills-column:nth-of-type(4) .skill-tag {
     background-color: rgba(255, 215, 180, 0.1);
     border: 1px solid #ffd7b4;
     color: #ffd7b4;
 }
 
-.skills-column:nth-child(4) .skill-tag:hover {
+.skills-column:nth-of-type(4) .skill-tag:hover {
     background-color: #ffd7b4;
     color: #1d1d1d;
     transform: translateY(-2px);
