@@ -1,0 +1,49 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0a0e27" rx="80"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer hexagon -->
+  <path d="M 256 80 L 380 150 L 380 290 L 256 360 L 132 290 L 132 150 Z" 
+        fill="none" 
+        stroke="url(#grad1)" 
+        stroke-width="3" 
+        opacity="0.4"/>
+  
+  <!-- Letter A -->
+  <path d="M 130 350 L 160 240 L 190 150 L 220 240 L 250 350 M 145 275 L 235 275" 
+        fill="none" 
+        stroke="url(#grad1)" 
+        stroke-width="24" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+  
+  <!-- Letter K -->
+  <path d="M 285 350 L 285 150 M 285 245 L 355 150 M 285 245 L 355 350" 
+        fill="none" 
+        stroke="url(#grad1)" 
+        stroke-width="24" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+  
+  <!-- Tech accent line -->
+  <line x1="150" y1="400" x2="362" y2="400" stroke="#22d3ee" stroke-width="2" opacity="0.5"/>
+</svg>
