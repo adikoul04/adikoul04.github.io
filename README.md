@@ -4,13 +4,13 @@ A modern, professional personal portfolio website built with React, Vite, Tailwi
 
 ## Features
 
-- ✨ Modern, sleek design with dark theme and cyan/blue accents
-- 🎨 Animated gradient blobs and particle effects
-- 🎯 Side dots navigation for intuitive scrolling
-- 💫 Smooth page transitions with Framer Motion
-- 🎭 3D tilt effects on project cards
-- 📱 Fully responsive design
-- ⚡ Fast performance with Vite
+- Modern, sleek design with dark theme and cyan/blue accents
+- Animated gradient blobs and particle effects
+- Side dots navigation for intuitive scrolling
+- Smooth page transitions with Framer Motion
+- 3D tilt effects on project cards
+- Fully responsive design
+- Fast performance with Vite
 
 ## Tech Stack
 
