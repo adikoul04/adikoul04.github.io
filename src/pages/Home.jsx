@@ -114,7 +114,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="relative order-1 md:order-2"
+            className="relative order-1 md:order-2 mt-5 md:mt-0"
           >
             <div className="relative w-full max-w-md mx-auto">
               {/* Glow effect */}
