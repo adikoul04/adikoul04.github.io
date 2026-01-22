@@ -4,6 +4,31 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   const experiences = [
     {
+      title: 'Quantitative Trading Intern',
+      company: 'IMC Trading',
+      period: 'Summer 2026',
+      logo: '/images/IMC_Logo.png',
+      website: 'https://www.imc.com/us',
+      achievements: [
+        'Incoming Summer 2026 Intern'
+      ],
+      roundLogo: false
+    },
+    {
+      title: 'Machine Learning Engineer',
+      company: 'Vex',
+      period: 'August 2025 - Present',
+      logo: '/images/Vex_Logo.webp',
+      website: 'https://apps.apple.com/us/app/vex-meet-people-voice-chat/id6748897865',
+      achievements: [
+        'Played a key role in driving 20x user growth by building and deploying machine-learning features from pre-launch prototypes through production, iterating based on real user behavior.',
+        'Engineered end-to-end custom voice agents using ElevenLabs, including fine-tuned conversational AI flows optimized for empathy, tone matching, and natural turn-taking, resulting in more engaging and human-like interactions.',
+        'Built interactive in-chat engagement features, including a real-time soundboard and image-based reactions, increasing session length, improving user retention, and contributing to organic virality through more expressive conversations',
+        'Led the migration of the AI inference pipeline from OpenAI to Google Gemini, redesigning request orchestration and caching layers to reduce inference costs by ~40% while improving median response latency by ~30%.'
+      ],
+      roundLogo: false
+    },
+    {
       title: 'Software Engineering Intern',
       company: 'Accenture',
       period: 'May 2025 - August 2025',
@@ -62,7 +87,7 @@ const Experience = () => {
     {
       title: 'Youth Swim Instructor/Lifeguard',
       company: 'Lifetime',
-      period: 'August 2022 - Present',
+      period: 'August 2022 - August 2025',
       logo: '/images/Lifetime_Logo.png',
       website: 'https://www.lifetime.life/',
       achievements: [
