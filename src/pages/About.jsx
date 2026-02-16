@@ -12,7 +12,7 @@ const About = () => {
       'Tailwind CSS', 'Flask', 'ROS', 'Git'
     ],
     'Technologies & Tools': [
-      'AWS', 'Docker', 'Supabase', 'MongoDB', 'Netlify', 
+      'AWS', 'Docker', 'Supabase', 'MongoDB', 'Netlify', 'Railway',
       'Streamlit', 'Salesforce', 'Selenium', 'CARLA', 'ArduPilot'
     ],
     'AI/ML Concepts': [

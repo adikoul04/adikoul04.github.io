@@ -49,10 +49,10 @@ const Experience = () => {
       logo: '/images/BU_Logo.png',
       website: 'https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/',
       achievements: [
-        'Tested new autonomous driving models in the CARLA simulator',
-        'Added custom signs and other obstacles into a CARLA instance for model training',
-        'Added descriptions to corresponding videos to be used for LLM training and testing',
-        'Parsed through and annotated training data to mark for retraining or discarding'
+        'Designed and executed experiments to evaluate autonomous driving models within the CARLA simulator, benchmarking performance across diverse traffic and environmental scenarios',
+        'Engineered and integrated custom traffic signs, dynamic obstacles, and edge-case scenarios into CARLA environments to improve robustness and stress-test perception and planning systems',
+        'Built a multimodal dataset pipeline by pairing simulation videos with structured natural-language descriptions, enabling downstream LLM-based evaluation and cross-modal training',
+        'Developed data curation and validation workflows to systematically identify corrupted, low-signal, or failure-case frames, streamlining retraining cycles for research collaborators'
       ],
       roundLogo: true
     },
@@ -63,10 +63,10 @@ const Experience = () => {
       logo: '/images/SES_Logo.png',
       website: 'https://ses.ai/',
       achievements: [
-        'Used LLMs to extract solvent and electrolyte data from 7500+ battery papers and constructed a database containing relevant information',
-        'Created a random forest classification model to analyze and predict correlation between factors related to issues in the battery production process',
-        'Developed tools that calculated Tanimoto similarity scores and used K-means clustering to aid scientists in finding desirable chemical compounds',
-        'Built a web app used company-wide to search a database of academic articles and retrieve data generated during the battery manufacturing process'
+        'Built an LLM-powered information extraction pipeline to parse solvent and electrolyte properties from 7,500+ battery research papers, producing a structured, queryable database for downstream analysis',
+        'Trained and evaluated a random forest classification model to identify and predict correlations between material properties and failure modes in the battery manufacturing process',
+        'Developed cheminformatics tools leveraging Tanimoto similarity metrics and K-means clustering to help researchers surface promising chemical compounds and explore the design space efficiently',
+        'Designed and deployed a full-stack web application enabling company-wide search across academic literature and internal manufacturing data, unifying experimental results and model outputs in a single interface'
       ],
       roundLogo: false
     },
@@ -77,10 +77,10 @@ const Experience = () => {
       logo: '/images/RecWell_Logo.png',
       website: 'https://recwell.umd.edu/',
       achievements: [
-        'Developing and refining competitive swimming techniques',
+        'Developed and refined competitive swimming techniques',
         'Taught ages ranging from 6 months to adult according to American Red Cross curriculum',
-        'Promoting aquatic safety and fostering an encouraging learning environment',
-        'Writing individualized reports upon the completion of each semester'
+        'Promoted aquatic safety and fostered an encouraging learning environment',
+        'Wrote individualized reports upon the completion of each semester'
       ],
       roundLogo: true
     },
@@ -91,9 +91,9 @@ const Experience = () => {
       logo: '/images/Lifetime_Logo.png',
       website: 'https://www.lifetime.life/',
       achievements: [
-        'Managing groups of up to seven children in the water',
-        'Monitoring a complex of indoor and outdoor pools and seating areas',
-        'Promoting safety and high levels of hospitality'
+        'Managed groups of up to seven children in the water',
+        'Monitored a complex of indoor and outdoor pools and seating areas',
+        'Promoted safety and high levels of hospitality'
       ],
       roundLogo: false
     },
