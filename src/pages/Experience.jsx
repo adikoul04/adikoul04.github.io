@@ -19,7 +19,7 @@ const Experience = () => {
       company: 'Vex',
       period: 'August 2025 - Present',
       logo: '/images/Vex_Logo.webp',
-      website: 'https://apps.apple.com/us/app/vex-meet-people-voice-chat/id6748897865',
+      website: 'https://vex.social/',
       achievements: [
         'Played a key role in driving 20x user growth by building and deploying machine-learning features from pre-launch prototypes through production, iterating based on real user behavior.',
         'Engineered end-to-end custom voice agents using ElevenLabs, including fine-tuned conversational AI flows optimized for empathy, tone matching, and natural turn-taking, resulting in more engaging and human-like interactions.',
